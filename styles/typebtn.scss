@@ -1,0 +1,58 @@
+#TypeBtn {
+  .btn-line {
+    > button {
+      $width-length: 25px;
+      $speed: 300ms;
+
+      overflow: visible !important;
+      transition: box-shadow $speed;
+
+      &:not(:last-child) {
+        margin-right: $width-length - 5px;
+
+        &::before {
+          content: '';
+          position: absolute;
+          display: flex;
+          width: $width-length;
+          height: 2px;
+          transform: translate(30px);
+          //   background: #d2d8df;
+          background: #ffd00070;
+          //   background: none;
+          border-radius: 30px;
+          pointer-events: none;
+        }
+      }
+
+      &[data-title] {
+        &::after {
+          white-space: nowrap;
+          transform: translate(0, 140%);
+        }
+        &:hover::after {
+          transform: translate(0, 150%);
+        }
+      }
+
+      &:hover {
+        box-shadow: 0 0 0 4px #00000015;
+      }
+
+      &.is-active {
+        box-shadow: 0 0 0 4px #ffd000;
+        &::before {
+          background: #ffd000;
+        }
+
+        ~ ::before {
+          background: #d2d8df;
+        }
+      }
+
+      &:active {
+        transform: scale(1);
+      }
+    }
+  }
+}

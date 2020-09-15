@@ -1,0 +1,48 @@
+#card-preview {
+  #chart-preview {
+    > .chart-item {
+      width: 30px;
+      height: auto;
+      min-height: 5px;
+      max-height: 120px;
+      background: #ffffff40;
+
+      margin-left: 2px;
+      margin-right: 2px;
+      border-radius: 4px;
+
+      transition: height 500ms, background 300ms;
+
+      &:hover {
+        // filter: contrast(1.1);
+        background: #ffffff80;
+      }
+
+      &[data-tooltip] {
+        $speed: 100ms;
+        &::before {
+          content: attr(data-tooltip);
+          position: absolute;
+          opacity: 0;
+          z-index: 1000;
+          padding: 8px;
+          padding-top: 6px;
+          padding-bottom: 6px;
+          font-size: small;
+          border-radius: 10px;
+          transition: margin-top $speed, opacity $speed, transform $speed;
+          transform: scale(0.8) translate(0, -100%);
+          color: #ffffffee;
+          background: #000000a4;
+          word-break: break-all;
+          pointer-events: none;
+        }
+        &:hover::before {
+          opacity: 1;
+          transform: scale(1) translate(0, -150%);
+          transition-delay: 500ms;
+        }
+      }
+    }
+  }
+}

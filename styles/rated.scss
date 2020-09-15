@@ -1,0 +1,104 @@
+#title {
+  font-size: large;
+}
+
+#title {
+  // border-bottom: 1px solid #0000000a;
+  border-bottom: 1px solid #ffffff3a;
+}
+
+#rated-items {
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 34px;
+
+    align-self: center;
+  }
+  div {
+    .dots {
+      color: #d2d8df80;
+    }
+
+    &:first-child .dot {
+      background: #ff1515;
+    }
+    &:nth-child(2) .dot {
+      background: #ff8e15;
+    }
+    &:nth-child(3) .dot {
+      background: #ffc115;
+    }
+    &:nth-child(4) .dot {
+      background: #c1ff15;
+    }
+    &:nth-child(5) .dot {
+      background: #34ff15;
+    }
+    &:nth-child(6) .dot {
+      background: #15ffad;
+    }
+    &:nth-child(7) .dot {
+      background: #15fff7;
+    }
+    &:nth-child(8) .dot {
+      background: #157eff;
+    }
+    &:nth-child(9) .dot {
+      background: #1534ff;
+    }
+    &:nth-child(10) .dot {
+      background: #a115ff;
+    }
+    //*
+    &:first-child .dots + span,
+    &:first-child .dots > span {
+      color: #ff1515;
+    }
+    &:nth-child(2) .dots + span,
+    &:nth-child(2) .dots > span {
+      color: #ff8e15;
+    }
+    &:nth-child(3) .dots + span,
+    &:nth-child(3) .dots > span {
+      color: #ffc115;
+    }
+    &:nth-child(4) .dots + span,
+    &:nth-child(4) .dots > span {
+      color: #c1ff15;
+    }
+    &:nth-child(5) .dots + span,
+    &:nth-child(5) .dots > span {
+      color: #34ff15;
+    }
+    &:nth-child(6) .dots + span,
+    &:nth-child(6) .dots > span {
+      color: #15ffad;
+    }
+    &:nth-child(7) .dots + span,
+    &:nth-child(7) .dots > span {
+      color: #15fff7;
+    }
+    &:nth-child(8) .dots + span,
+    &:nth-child(8) .dots > span {
+      color: #157eff;
+    }
+    &:nth-child(9) .dots + span,
+    &:nth-child(9) .dots > span {
+      color: #1534ff;
+    }
+    &:nth-child(10) .dots + span,
+    &:nth-child(10) .dots > span {
+      color: #a115ff;
+    }
+  }
+
+  [data-title] {
+    &::after {
+      transform: translate(-100%, 100%);
+    }
+    &:hover::after {
+      transform: translate(-100%, 130%);
+    }
+  }
+}
